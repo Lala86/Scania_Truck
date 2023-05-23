@@ -1,4 +1,4 @@
-# Scania_Truck
+# APS Failure at Scania Trucks
 ## Introduction
 The dataset consists of data collected from heavy Scania
 trucks in everyday usage. The system in focus is the
@@ -11,19 +11,26 @@ The negative class consists of trucks with failures
 for components not related to the APS. The data consists
 of a subset of all available data, selected by experts.
 
+## Abstract 
+The datasets' positive class consists of component failures for a specific component of the APS system. 
+The negative class consists of trucks with failures for components not related to the APS.
+
+## Problem Statement
+To predict APS failure accurately and minimizes the cost of failures
+
 ## Challenge metric
 
 Cost-metric of miss-classification:
-
-Predicted class | True class |
-| pos | neg |
------------------------------------------
-pos | - | Cost_1 |
------------------------------------------
-neg | Cost_2 | - |
------------------------------------------
+```
+Predicted class |    True class   |
+                |   pos  |   neg  |
+-----------------------------------
+     pos        |    -   | Cost_1 |
+-----------------------------------
+     neg        | Cost_2 |    -   |
+-----------------------------------
 Cost_1 = 10 and cost_2 = 500
-
+```
 The total cost of a prediction model the sum of 'Cost_1'
 multiplied by the number of Instances with type 1 failure
 and 'Cost_2' with the number of instances with type 2 failure,

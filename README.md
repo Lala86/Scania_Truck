@@ -31,6 +31,16 @@ Predicted class |    True class   |
 -----------------------------------
 Cost_1 = 10 and cost_2 = 500
 ```
+```
+Predicted class |    True class   |
+                |   pos  |   neg  |
+-----------------------------------
+     pos        |   TP   |   FP   |
+-----------------------------------
+     neg        |   FN   |   TN   |
+-----------------------------------
+Total_cost = 10*FP + 500*FN
+```
 The total cost of a prediction model the sum of "Cost_1" 
      multiplied by the number of Instances with type 1 failure 
      and "Cost_2" with the number of instances with type 2 failure, 
